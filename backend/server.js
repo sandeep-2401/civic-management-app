@@ -4,6 +4,8 @@ import cors from 'cors';
 import issueRoutes from './routes/issues.js';
 import authRoutes from './routes/auth.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import statisticsRoutes from './routes/statistics.js';
+import adminRoutes from './routes/admin.js';
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ app.use(express.json()); // Parse JSON bodies
 // Routes
 app.use('/api/issues', issueRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/statistics', statisticsRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Error handling middleware
 app.use(errorHandler);

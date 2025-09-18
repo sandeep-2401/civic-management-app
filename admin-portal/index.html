@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- Bootstrap CSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+    .card-status {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .card-status.pending { color: #dc3545; }
+    .card-status.in-progress { color: #ffc107; }
+    .card-status.resolved { color: #28a745; }
+    .issue-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-4">
+    <h2 class="mb-4 text-center">Admin Dashboard</h2>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4" id="stats-cards">
+      <div class="col-md-4 mb-3">
+        <div class="card text-center p-3 shadow-sm bg-white">
+          <h5>Total Issues</h5>
+          <h3 id="total-issues">0</h3>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center p-3 shadow-sm bg-white">
+          <h5>Resolved</h5>
+          <h3 id="resolved-issues">0</h3>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-center p-3 shadow-sm bg-white">
+          <h5>In Progress</h5>
+          <h3 id="inprogress-issues">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Issues Grid -->
+    <div class="row" id="issues-grid"></div>
+  </div>
+
+  <!-- Bootstrap JS Bundle CDN (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
